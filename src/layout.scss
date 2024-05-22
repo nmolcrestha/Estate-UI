@@ -1,25 +1,29 @@
-@import './responsive.scss';
+@import "./responsive.scss";
 
-.layout{
-    background-color: rebeccapurple;
-    height: 100vh;
-    max-width: 1366px;
-    margin: 0 auto;
-    padding: 0 20px;
-    
-    @include lg{
-        background-color: violet;
-        max-width: 1280px;
-    }
+.layout {
+  height: 100vh;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
 
-    @include md{
-        background-color: aqua;
-        max-width: 768px;
-    }
+  @include lg {
+    background-color: violet;
+    max-width: 1280px;
+  }
 
-    @include sm{
-        background-color: red;
-        max-width: 640px;
-    }
- 
+  @include md {
+    background-color: aqua;
+    max-width: 768px;
+  }
+
+  @include sm {
+    background-color: red;
+    max-width: 640px;
+  }
+  
+  .content{
+    flex: 1;
+  }
 }
