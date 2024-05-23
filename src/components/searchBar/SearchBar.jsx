@@ -19,7 +19,7 @@ const SearchBar = () => {
         {types.map((type) => (
           <button
             key={type}
-            onCanPlay={() => switchType({ type })}
+            onClick={() => switchType(type)}
             className={query.type === type ? "active" : ""}
           >
             {type}
@@ -30,20 +30,20 @@ const SearchBar = () => {
         <input type="text" name="location" placeholder="City Location" />
         <input
           type="number"
+          name="minPrice"
           min={0}
           max={10000000}
-          name="minPrice"
           placeholder="Min Price"
         />
         <input
           type="number"
+          name="maxPrice"
           min={0}
           max={10000000}
-          name="maxPrice"
           placeholder="Max Price"
         />
         <button>
-          <img src="/search.png" alt="search" />
+          <img src="/search.png" alt="" />
         </button>
       </form>
     </div>
