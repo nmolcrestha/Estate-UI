@@ -1,10 +1,10 @@
 import "./filter.scss";
 
-const Filter = () => {
+function Filter() {
   return (
     <div className="filter">
       <h1>
-        Search results for <b>Londonf</b>
+        Search results for <b>London</b>
       </h1>
       <div className="top">
         <div className="item">
@@ -21,7 +21,7 @@ const Filter = () => {
         <div className="item">
           <label htmlFor="type">Type</label>
           <select name="type" id="type">
-            <option value="">Any</option>
+            <option value="">any</option>
             <option value="buy">Buy</option>
             <option value="rent">Rent</option>
           </select>
@@ -29,7 +29,7 @@ const Filter = () => {
         <div className="item">
           <label htmlFor="property">Property</label>
           <select name="property" id="property">
-            <option value="">Any</option>
+            <option value="">any</option>
             <option value="apartment">Apartment</option>
             <option value="house">House</option>
             <option value="condo">Condo</option>
@@ -42,16 +42,16 @@ const Filter = () => {
             type="number"
             id="minPrice"
             name="minPrice"
-            placeholder="Any"
+            placeholder="any"
           />
         </div>
         <div className="item">
           <label htmlFor="maxPrice">Max Price</label>
           <input
-            type="number"
+            type="text"
             id="maxPrice"
             name="maxPrice"
-            placeholder="Any"
+            placeholder="any"
           />
         </div>
         <div className="item">
@@ -60,15 +60,15 @@ const Filter = () => {
             type="text"
             id="bedroom"
             name="bedroom"
-            placeholder="Any"
+            placeholder="any"
           />
         </div>
         <button>
-          <img src="/search.png" alt="search" />
+          <img src="/search.png" alt="" />
         </button>
       </div>
     </div>
   );
-};
+}
 
 export default Filter;

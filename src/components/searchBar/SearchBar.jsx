@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./searchBar.scss";
 
 const types = ["buy", "rent"];
-const SearchBar = () => {
+
+function SearchBar() {
   const [query, setQuery] = useState({
     type: "buy",
     location: "",
@@ -13,6 +14,7 @@ const SearchBar = () => {
   const switchType = (val) => {
     setQuery((prev) => ({ ...prev, type: val }));
   };
+
   return (
     <div className="searchBar">
       <div className="type">
@@ -43,11 +45,11 @@ const SearchBar = () => {
           placeholder="Max Price"
         />
         <button>
-          <img src="/search.png" alt="search" />
+          <img src="/search.png" alt="" />
         </button>
       </form>
     </div>
   );
-};
+}
 
 export default SearchBar;

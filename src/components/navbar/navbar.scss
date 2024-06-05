@@ -1,8 +1,9 @@
 @import "../../responsive.scss";
+
 nav {
+  height: 100px;
   display: flex;
   justify-content: space-between;
-  height: 100px;
   align-items: center;
 
   a {
@@ -45,14 +46,13 @@ nav {
       }
     }
   }
-
   .right {
     flex: 2;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 100%;
     background-color: #fcf5f3;
+    height: 100%;
 
     @include md {
       background-color: transparent;
@@ -62,6 +62,7 @@ nav {
       padding: 12px 24px;
       margin: 20px;
     }
+
     .user{
       display: flex;
       align-items: center;
@@ -104,6 +105,7 @@ nav {
 
       }
     }
+
     .register {
       background-color: #fece51;
     }
@@ -121,16 +123,16 @@ nav {
       @include sm {
         display: inline;
       }
-
     }
+
     .menu {
       position: absolute;
       top: 0;
       right: -50%;
       background-color: black;
+      color: white;
       height: 100vh;
       width: 50%;
-      color: white;
       transition: all 1s ease;
       display: flex;
       flex-direction: column;
@@ -143,7 +145,7 @@ nav {
       }
 
       @include sm {
-        a{
+        a {
           display: initial;
         }
       }

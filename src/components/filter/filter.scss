@@ -22,29 +22,34 @@
       width: 100px;
       padding: 10px;
       border: 1px solid #e0e0e0;
-    }
-  }
-  .top{
-    input{
-        width: 100%
+      border-radius: 5px;
+      font-size: 14px;
     }
   }
 
-  .bottom{
+  .top {
+    input {
+      width: 100%;
+    }
+  }
+
+  .bottom {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
 
-    button{
-        width: 100px;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-        background-color: #fece51;
-    }
+    button {
+      width: 100px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #fece51;
 
-    img{
+      img {
         width: 24px;
+        height: 24px;
+      }
     }
   }
 }
