@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./login.scss";
 import { Link, useNavigate } from "react-router-dom";
 import apiRequest from "../../lib/apiRequest";
+import { AuthContext } from "../../context/AuthContext";
 
 function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const { updateUser } = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,11 +21,10 @@ function Login() {
 
     try {
       const res = await apiRequest.post("/auth/login", {
-        email:username,
+        email: username,
         password,
       });
-
-      localStorage.setItem("user", JSON.stringify(res.data));
+      updateUser(res.data);
       navigate("/");
     } catch (err) {
       // console.log(err);
@@ -52,7 +53,7 @@ function Login() {
             placeholder="Password"
             required
           />
-          <button disable={loading}>Login</button>
+          <button disabled={loading}>Login</button>
           {error && <span>{error}</span>}
           <Link to="/register">{"Don't"} you have an account?</Link>
         </form>
